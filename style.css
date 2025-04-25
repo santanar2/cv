@@ -1,0 +1,39 @@
+<style>
+  /* Tema escuro */
+  .dark-theme {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .dark-theme .w3-white {
+    background-color: black !important;
+  }
+
+  .dark-theme .w3-card {
+    background-color: black !important;
+  }
+
+  .dark-theme .w3-text-grey {
+    color: white !important;
+  }
+
+  .dark-theme .w3-text-teal {
+    color: lightblue !important;
+  }
+
+  .dark-theme .w3-light-grey {
+    background-color: black !important;
+  }
+
+  .dark-theme .w3-container {
+    background-color: black !important;
+    color: white !important;
+  }
+</style>
+
+<script>
+  function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle('dark-theme');
+  }
+</script>

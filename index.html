@@ -16,10 +16,31 @@
     <style>
       html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
-    
+    <!--script para alternar o tema adicione o seguinte script antes do fechamento da tag-->
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        const elements = document.querySelectorAll('.w3-container, .w3-card, .w3-text-grey, .w3-text-teal');
+
+        // Alterna a cor de fundo e texto do body
+        body.style.backgroundColor = body.style.backgroundColor === 'black' ? 'white' : 'black';
+        body.style.color = body.style.color === 'white' ? 'black' : 'white';
+
+        // Alterna as cores dos elementos
+        elements.forEach(element => {
+          element.style.backgroundColor = element.style.backgroundColor === 'black' ? 'white' : 'black';
+          element.style.color = element.style.color === 'white' ? 'black' : 'white';
+        });
+      }
+    </script>
   </head>
 
   <body class="w3-light-grey" cz-shortcut-listen="true">
+
+    <!-- Botão para alternar o tema -->
+    <div class="w3-container w3-center w3-margin-top">
+      <button onclick="toggleTheme()" class="w3-button w3-teal">Alternar Tema</button>
+    </div>
   
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -56,8 +77,11 @@
               </div>
               <p>Javascript</p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:30%">5%</div>
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">5%</div>
               </div>
+
+            
+
               <!-- 
               <p>TODO</p>
                             <div class="w3-light-grey w3-round-xlarge w3-small">
@@ -95,6 +119,7 @@
     
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre</h2>
+            
             
             <p>
               <h5 class="w3-opacity"><b>Estagiário Descrição:</b></h5>
