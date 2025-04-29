@@ -33,6 +33,20 @@
         });
       }
     </script>
+    <script>
+      let currentLanguage = 'br'; // Define o idioma inicial como português (BR)
+
+      function toggleLanguage() {
+        const elements = document.querySelectorAll('[data-lang]');
+        currentLanguage = currentLanguage === 'br' ? 'us' : 'br'; // Alterna entre 'br' e 'us'
+
+        elements.forEach(element => {
+          const langBR = element.getAttribute('data-lang-br');
+          const langUS = element.getAttribute('data-lang-us');
+          element.textContent = currentLanguage === 'br' ? langBR : langUS;
+        });
+      }
+    </script>
   </head>
 
   <body class="w3-light-grey" cz-shortcut-listen="true">
@@ -40,6 +54,7 @@
     <!-- Botão para alternar o tema -->
     <div class="w3-container w3-center w3-margin-top">
       <button onclick="toggleTheme()" class="w3-button w3-teal w3-round">Black / white</button>
+      <button onclick="toggleLanguage()" class="w3-button w3-teal w3-round">BR / US</button>
     </div>
   
     <!-- Page Container -->
@@ -54,12 +69,12 @@
           <div class="w3-white w3-text-grey w3-card-4">
             <!-- @falvojr: This container has been modified to not use a profile picture. -->
             <div class="w3-container">
-              <h2>Ricardo Honório de Santana</h2>
+              <h2 data-lang data-lang-br="Ricardo Honório de Santana" data-lang-us="Richard Honor of Santana">Ricardo Honório de Santana</h2>
+              <p data-lang data-lang-br="Técnico de Manutenção (CCO) Via Mobilidade 8 e 9" data-lang-us="Maintenance Technician (CCO) Via Mobility 8 and 9">Técnico de Manutenção (CCO) Via Mobilidade 8 e 9</p>
+              <p data-lang data-lang-br="Estudante de Desenvolvimento Front-End" data-lang-us="Front-End Development Student">Estudante de Desenvolvimento Front-End</p>
             </div>
             <div class="w3-container">
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Técnico de Manutenção (CCO) Via Mobilidade 8 e 9</p>
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Estudante de Desenvolvimento Front-End</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>São Paulo, SP</p>
+              <p data-lang data-lang-br="São Paulo, SP" data-lang-us="São Paulo, SP">São Paulo, SP</p>
               <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ricardo.santanaccr@gmail.com</p>
               <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(11) 96033-6069</p>
               <hr>
@@ -67,55 +82,30 @@
               <p class="w3-large">
                 <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
               </p>
-              <p>HTML</p>
+              <p data-lang data-lang-br="HTML" data-lang-us="HTML">HTML</p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:5%">5%</div>
               </div>
-              <p>CSS</p>
+              <p data-lang data-lang-br="CSS" data-lang-us="CSS">CSS</p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:5%">5%</div>
               </div>
               
-              <p>Git</p>
+              <p data-lang data-lang-br="Git" data-lang-us="Git">Git</p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:20%">20%</div>
               </div>
-  <!--
-              <p>Javascript</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:5%">5%</div>
-              </div>
-              <p>React</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:10%">10%</div>
-              </div>
-              <p>Node.js</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:15%">15%</div>
-              </div> -->
-              <!-- 
-              <p>TODO</p>
-                            <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-              </div>
-              <br> 
-              -->
   
               <p class="w3-large w3-text-theme">
                 <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
               </p>
-              <p>Português</p>
+              <p data-lang data-lang-br="Português" data-lang-us="Portuguese">Português</p>
               <div class="w3-light-grey w3-round-xlarge">
                 <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%">90%</div>
               </div>
-              <p>Inglês</p>
+              <p data-lang data-lang-br="Inglês" data-lang-us="English">Inglês</p>
               <div class="w3-light-grey w3-round-xlarge">
                 <div class="w3-round-xlarge w3-teal" style="height:24px;width:15%">15%</div>
-              
-              </div>
-              <p></p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:0%">0%</div>
               </div>
               <br>
             </div>
@@ -129,24 +119,32 @@
         <div class="w3-twothird">
     
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-05"><i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre</h2>
+            <h2 class="w3-text-grey w3-padding-05" data-lang data-lang-br="Sobre" data-lang-us="About">
+              <i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre
+            </h2>
             
             <div class="w3-container">
-              
               <p>
-                <h5 class="w3-opacity"><b>Transição de carreira:</b></h5>
-              Em transição da área técnica de manutenção para o desenvolvimento front-end, com foco em adquirir experiência prática e consolidar conhecimentos em HTML, CSS, JavaScript e frameworks modernos para construção de interfaces web.
-              <br><h5 class="w3-opacity"><b>Habilidades:</b></h5>
-               Conhecimento básico em HTML, CSS, JavaScript e GitHub.
-              <br><h5 class="w3-opacity"><b>Objetivo:</b></h5>
-              Buscando ganhar experiência prática e aprofundar os fundamentos do desenvolvimento front-end, com abertura para aprender novas tecnologias e expandir conhecimentos na área.
+                <h5 class="w3-opacity" data-lang data-lang-br="Transição de carreira:" data-lang-us="Career Transition:"><b>Transição de carreira:</b></h5>
+                <span data-lang data-lang-br="Em transição da área técnica de manutenção para o desenvolvimento front-end, com foco em adquirir experiência prática e consolidar conhecimentos em HTML, CSS, JavaScript e frameworks modernos para construção de interfaces web."
+                      data-lang-us="Transitioning from the technical maintenance field to front-end development, focusing on gaining practical experience and consolidating knowledge in HTML, CSS, JavaScript, and modern frameworks for building web interfaces.">
+                  Em transição da área técnica de manutenção para o desenvolvimento front-end, com foco em adquirir experiência prática e consolidar conhecimentos em HTML, CSS, JavaScript e frameworks modernos para construção de interfaces web.
+                </span>
+                <br>
+                <h5 class="w3-opacity" data-lang data-lang-br="Habilidades:" data-lang-us="Skills:"><b>Habilidades:</b></h5>
+                <span data-lang data-lang-br="Conhecimento básico em HTML, CSS, JavaScript e GitHub."
+                      data-lang-us="Basic knowledge in HTML, CSS, JavaScript, and GitHub.">
+                  Conhecimento básico em HTML, CSS, JavaScript e GitHub.
+                </span>
+                <br>
+                <h5 class="w3-opacity" data-lang data-lang-br="Objetivo:" data-lang-us="Objective:"><b>Objetivo:</b></h5>
+                <span data-lang data-lang-br="Buscando ganhar experiência prática e aprofundar os fundamentos do desenvolvimento front-end, com abertura para aprender novas tecnologias e expandir conhecimentos na área."
+                      data-lang-us="Seeking to gain practical experience and deepen the fundamentals of front-end development, with openness to learning new technologies and expanding knowledge in the field.">
+                  Buscando ganhar experiência prática e aprofundar os fundamentos do desenvolvimento front-end, com abertura para aprender novas tecnologias e expandir conhecimentos na área.
+                </span>
               </p>
-             
               <hr>
             </div>
-           
-
-           
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
@@ -290,11 +288,13 @@
     </div>
   
     <footer class="w3-container w3-teal w3-center w3-margin-top">
-      <p>Minhas Redes Sociais</p>
+      <p data-lang data-lang-br="Minhas Redes Sociais" data-lang-us="My Social Networks">Minhas Redes Sociais</p>
       <a href="https://github.com/santanar2" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
       <a href="https://www.linkedin.com/in/ricardo-hon%C3%B3rio-de-santana-630a9493/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
+    
+    <p data-lang data-lang-br="Olá, mundo!" data-lang-us="Hello, world!">Olá, mundo!</p>
   
   </body>
 
