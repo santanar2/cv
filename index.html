@@ -43,18 +43,18 @@
         elements.forEach(element => {
           const langBR = element.getAttribute('data-lang-br');
           const langUS = element.getAttribute('data-lang-us');
-          element.textContent = currentLanguage === 'br' ? langBR : langUS;
+          element.innerHTML = currentLanguage === 'br' ? langBR : langUS; // Usa innerHTML para preservar a formatação completa
         });
       }
     </script>
   </head>
 
-  <body class="w3-light-grey" cz-shortcut-listen="true">
-
+  <body class="w3-teal" cz-shortcut-listen="true">
+<br><br>
     <!-- Botão para alternar o tema -->
     <div class="w3-container w3-center w3-margin-top">
-      <button onclick="toggleTheme()" class="w3-button w3-teal w3-round">Black / white</button>
-      <button onclick="toggleLanguage()" class="w3-button w3-teal w3-round">BR / US</button>
+      <button onclick="toggleTheme()" class="w3-button w3-teal w3-round" style="border: 2px solid black;">Black / white</button>
+      <button onclick="toggleLanguage()" class="w3-button w3-teal w3-round" style="border: 2px solid black;">BR / US</button>
     </div>
   
     <!-- Page Container -->
@@ -86,6 +86,7 @@
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:5%">5%</div>
               </div>
+              
               <p data-lang data-lang-br="CSS" data-lang-us="CSS">CSS</p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:5%">5%</div>
@@ -96,6 +97,18 @@
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:20%">20%</div>
               </div>
   
+              <p class="w3-large">
+                <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Courses</b>
+              </p>
+              <p data-l
+
+
+              
+              <p data-lang data-lang-br="Bootcamp Microsoft GitHub Copilot" data-lang-us="Microsoft GitHub Copilot Bootcamp">Bootcamp Microsoft GitHub Copilot </p>
+              <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
+              </div>
+
               <p class="w3-large w3-text-theme">
                 <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
               </p>
@@ -148,135 +161,165 @@
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
+            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Experiências" data-lang-us="Experiences">
               <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
             </h2>
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>VIAMOBILIDADE 8 E 9 <br>Técnico MEF CCO</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Outubro de 2021 - <span class="w3-tag w3-teal w3-round">Aual</span></h6>
-              <p>( CCO ) Centro de Controle Operacional,<br> Equipe responsável pelo
-                restabelecimento dos sistemas, como:<b><br>Atividades:</b><br> Servidores Alstom e Siemens, sistema
-                de transmissão óptico CISCO, SAGEM, sistema de gravação em telefonia,
-                Rádio Tetra Motorola e Sinalização. 
-                <br> - Operação em Windows, Linux e Unix;</b>
-                <br> - Manutenção preventiva;
-                <br> - Manutenção corretiva;
-                <br> - Gestão de ordens SAP PM;
-                <br><br>Presente também como restabelecimento dos sistemas fixos da linha, como:
-                elevador, escada rolante, ar-condicionado, bloqueio, sistema de sinalização,
-                subestação, bombas de consumo, banco de bateria, câmeras, sonorização,
-                entre outros. <br>
-          
-                -</p>
+              <h5 class="w3-opacity" data-lang data-lang-br="VIAMOBILIDADE 8 E 9 Técnico MEF CCO" data-lang-us="VIAMOBILIDADE 8 AND 9 MEF CCO Technician">
+                <b>VIAMOBILIDADE 8 E 9 <br>Técnico MEF CCO</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="Outubro de 2021 - Atual" data-lang-us="October 2021 - Present">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Outubro de 2021 - <span class="w3-tag w3-teal w3-round">Atual</span>
+              </h6>
+              <p data-lang 
+                 data-lang-br="( CCO ) Centro de Controle Operacional, Equipe responsável pelo restabelecimento dos sistemas, como:<br><b>Atividades:</b><br>Servidores Alstom e Siemens, sistema de transmissão óptico CISCO, SAGEM, sistema de gravação em telefonia, Rádio Tetra Motorola e Sinalização.<br>- Operação em Windows, Linux e Unix;<br>- Manutenção preventiva;<br>- Manutenção corretiva;<br>- Gestão de ordens SAP PM;<br><br>Presente também como restabelecimento dos sistemas fixos da linha, como: elevador, escada rolante, ar-condicionado, bloqueio, sistema de sinalização, subestação, bombas de consumo, banco de bateria, câmeras, sonorização, entre outros."
+                 data-lang-us="( CCO ) Operational Control Center, Team responsible for restoring systems, such as:<br><b>Activities:</b><br>Alstom and Siemens servers, CISCO optical transmission system, SAGEM, telephone recording system, Motorola Tetra Radio, and Signaling.<br>- Operation in Windows, Linux, and Unix;<br>- Preventive maintenance;<br>- Corrective maintenance;<br>- SAP PM order management;<br><br>Also responsible for restoring fixed systems of the line, such as: elevator, escalator, air conditioning, blocking, signaling system, substation, consumption pumps, battery bank, cameras, sound system, among others.">
+                ( CCO ) Centro de Controle Operacional,<br> Equipe responsável pelo restabelecimento dos sistemas, como:<br><b>Atividades:</b><br>Servidores Alstom e Siemens, sistema de transmissão óptico CISCO, SAGEM, sistema de gravação em telefonia, Rádio Tetra Motorola e Sinalização.<br>- Operação em Windows, Linux e Unix;<br>- Manutenção preventiva;<br>- Manutenção corretiva;<br>- Gestão de ordens SAP PM;<br><br>Presente também como restabelecimento dos sistemas fixos da linha, como: elevador, escada rolante, ar-condicionado, bloqueio, sistema de sinalização, subestação, bombas de consumo, banco de bateria, câmeras, sonorização, entre outros.
+              </p>
               <hr>
             </div>
 
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>FIBRANETBR <br>Técnico de telecomunicações</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Fevereiro de 2021 - <span class="w3-tag w3-teal w3-round">Agosto de 2021</span></h6>
-              <p> Atuação no Cliente,<br> Equipe responsável pelo instação e
-                restabelecimento dos sistemas, como:<b><br>Atividades:</b><br> B2B, B2C, Telecomunicação, Configuração, Instalador e Reparo, Manutenção Preventiva e
-                Corretiva, Configuração de equipamento, 5s, Análise de risco, Análise infra,
-                Confecção de conectores de fibra óptica, Fusão, Instalação de Internet.
-                <br> - Operação em Windows, Android;</b>
-                <br> - Manutenção corretiva;
-                <br> - Gestão de ordens;
-                <br><br> <br>
-              
-                
-                -</p>
+              <h5 class="w3-opacity" data-lang data-lang-br="FIBRANETBR Técnico de telecomunicações" data-lang-us="FIBRANETBR <br>Telecommunications Technician">
+                <b>FIBRANETBR <br>Telecommunications Technician</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="Fevereiro de 2021 - Agosto de 2021" data-lang-us="February 2021 - August 2021">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2021 - <span class="w3-tag w3-teal w3-round">August 2021</span>
+              </h6>
+              <p data-lang 
+                 data-lang-br="Atuação no Cliente, Equipe responsável pelo instação e restabelecimento dos sistemas, como:<br><b>Atividades:</b><br>B2B, B2C, Telecomunicação, Configuração, Instalador e Reparo, Manutenção Preventiva e Corretiva, Configuração de equipamento, 5s, Análise de risco, Análise infra, Confecção de conectores de fibra óptica, Fusão, Instalação de Internet.<br>- Operação em Windows, Android;<br>- Manutenção corretiva;<br>- Gestão de ordens;"
+                 data-lang-us="Client operations, Team responsible for installation and restoration of systems, such as:<br><b>Activities:</b><br>B2B, B2C, Telecommunications, Configuration, Installer and Repair, Preventive and Corrective Maintenance, Equipment Configuration, 5s, Risk Analysis, Infrastructure Analysis, Fiber Optic Connector Assembly, Splicing, Internet Installation.<br>- Operation in Windows, Android;<br>- Corrective maintenance;<br>- Order management;">
+                Client operations,<br> Team responsible for installation and restoration of systems, such as:<br><b>Activities:</b><br>B2B, B2C, Telecommunications, Configuration, Installer and Repair, Preventive and Corrective Maintenance, Equipment Configuration, 5s, Risk Analysis, Infrastructure Analysis, Fiber Optic Connector Assembly, Splicing, Internet Installation.<br>- Operation in Windows, Android;<br>- Corrective maintenance;<br>- Order management;
+              </p>
               <hr>
             </div>
 
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>ICOMON TECNOLOGIA LITDA. <br>Técnico Fttx</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Fevereiro de 2019 - <span class="w3-tag w3-teal w3-round">Novembro de 2019</span></h6>
-              <p> Atuação no Cliente,<br> Equipe responsável pelo instação e
-                restabelecimento dos sistemas, como:<b><br>Atividades:</b><br> B2B, B2C, Telecomunicação, Instalador e Reparo, Manutenção Preventiva e
-                Corretiva, Configuração de equipamento, 5s, Análise de risco, Análise infra,
-                Confecção de conectores de fibra óptica, Fusão de fibra óptica, Instalação de Internet, Voip e
-                Iptv, Confecção de conector cabo utp e Confecção de Conector cabo coaxial .
-                <br> - Operação em Windows e Android;</b>
-                <br> - Manutenção corretiva;
-                <br> - Gestão de ordens;
-                <br><br> <br>
-              
-                
-                </p>
-              <hr>
-            
-  
+              <h5 class="w3-opacity" data-lang data-lang-br="ICOMON TECNOLOGIA LITDA. Técnico Fttx" data-lang-us="ICOMON TECNOLOGIA LITDA. Fttx Technician">
+                <b>ICOMON TECNOLOGIA LITDA. Técnico Fttx</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="Fevereiro de 2019 - Novembro de 2019" data-lang-us="February 2019 - November 2019">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>Fevereiro de 2019 - <span class="w3-tag w3-teal w3-round">Novembro de 2019</span>
+              </h6>
+              <p data-lang 
+                 data-lang-br="Atuação no Cliente, Equipe responsável pelo instação e restabelecimento dos sistemas, como:<br><b>Atividades:</b><br>B2B, B2C, Telecomunicação, Instalador e Reparo, Manutenção Preventiva e Corretiva, Configuração de equipamento, 5s, Análise de risco, Análise infra, Confecção de conectores de fibra óptica, Fusão de fibra óptica, Instalação de Internet, Voip e Iptv, Confecção de conector cabo utp e Confecção de Conector cabo coaxial.<br>- Operação em Windows e Android;<br>- Manutenção corretiva;<br>- Gestão de ordens;"
+                 data-lang-us="Client operations, Team responsible for installation and restoration of systems, such as:<br><b>Activities:</b><br>B2B, B2C, Telecommunications, Installer and Repair, Preventive and Corrective Maintenance, Equipment Configuration, 5s, Risk Analysis, Infrastructure Analysis, Fiber Optic Connector Assembly, Fiber Optic Splicing, Internet Installation, Voip and Iptv, UTP Cable Connector Assembly, and Coaxial Cable Connector Assembly.<br>- Operation in Windows and Android;<br>- Corrective maintenance;<br>- Order management;">
+                Client operations,<br> Team responsible for installation and restoration of systems, such as:<br><b>Activities:</b><br>B2B, B2C, Telecommunications, Installer and Repair, Preventive and Corrective Maintenance, Equipment Configuration, 5s, Risk Analysis, Infrastructure Analysis, Fiber Optic Connector Assembly, Fiber Optic Splicing, Internet Installation, Voip and Iptv, UTP Cable Connector Assembly, and Coaxial Cable Connector Assembly.<br>- Operation in Windows and Android;<br>- Corrective maintenance;<br>- Order management;
+              </p>
+            </div>
+          </div>
+
           <div class="w3-container w3-card w3-white">
-            <h2 class="w3-text-grey w3-padding-16">
+            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Educação" data-lang-us="Education">
               <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
             </h2>
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>UNICESUMAR</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>07/2024 - 12/2026  <span class="w3-tag w3-teal w3-round"></span></h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)</h7>
-              <p>
+              <h5 class="w3-opacity" data-lang data-lang-br="UNICESUMAR" data-lang-us="UNICESUMAR">
+                <b>UNICESUMAR</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="07/2024 - 12/2026" data-lang-us="07/2024 - 12/2026">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>07/2024 - 12/2026 <span class="w3-tag w3-teal w3-round"></span>
+              </h6>
+              <h7 class="w3-text-teal" data-lang data-lang-br="Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)" data-lang-us="Technology in Systems Analysis and Development (ADS)">
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)
+              </h7>
+              <p data-lang 
+                 data-lang-br="A graduação de nível tecnólogo voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática."
+                 data-lang-us="The undergraduate technologist degree is aimed at training professionals capable of working in the planning, development, implementation, and maintenance of computational systems. It combines a solid theoretical foundation with intense practical application.">
                 A graduação de nível tecnólogo voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática.
               </p>
-              <!--<ul>
-                <li><a href="https://www.dio.me/certificate/6213111D" target="_blank">Curso: TQI Fullstack Developer (125h)</a></li>
-                <li><a href="https://www.dio.me/certificate/72361F24" target="_blank">Curso: Formação HTML Web Developer (21h)</a></li>
-                <li><a href="https://www.dio.me/certificate/64CE8868" target="_blank">Curso: Formação CSS Web Developer (46h)</a></li>
-              </ul>-->
               <hr>
             </div>
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>FIEB - Fundação Instituto de Educação de Barueri</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>07/2022 - 12/2023</h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Curso Técnico em Redes de Computadores</h7>
-              <p>É formação técnica que capacita profissionais a atuar na área de redes de computadores, abrangendo desde a instalação e configuração até a manutenção e administração de redes. área de Tecnologia da Informação (TI), combinando conhecimentos técnicos e habilidades práticas.</p>
-              
-              <h5 class="w3-opacity"><b>ETEC Getúlio Vargas</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>08/2020 - 12/2020</h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Especialização em Radiocomunicação</h7>
-              <p>Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma aborda em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT. </p>
+              <h5 class="w3-opacity" data-lang data-lang-br="ETEC Getúlio Vargas" data-lang-us="ETEC Getúlio Vargas">
+                <b>ETEC Getúlio Vargas</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="08/2020 - 12/2020" data-lang-us="08/2020 - 12/2020">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>08/2020 - 12/2020
+              </h6>
+              <h7 class="w3-text-teal" data-lang data-lang-br="Especialização em Radiocomunicação" data-lang-us="Specialization in Radiocommunication">
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Especialização em Radiocomunicação
+              </h7>
+              <p data-lang 
+                 data-lang-br="Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma aborda em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT."
+                 data-lang-us="Technical Specialization in Radiocommunication, System Networks, and Information Security in Telecommunications is aimed at training professionals to plan, implement, and manage communication and security systems in telecommunication networks. It covers digital modulation, optical and wireless network management, information security, and convergent network architectures such as 5G and IoT.">
+                Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma aborda em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT.
+              </p>
 
-              <h5 class="w3-opacity"><b>FGV - Fundação Getulio Vargas</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2020</h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i> DEFINIÇÕES E OBJETIVOS DA GESTÃO DE PROJETOS, Estratégia e Negócios</h7>
-              <p>O curso aborda os fundamentos da gestão de projetos, focando em planejamento, execução e controle de iniciativas organizacionais. Integra conceitos de estratégia empresarial com a prática da gestão de projetos. Ensina a alinhar projetos aos objetivos de negócio. Ideal para quem busca melhorar a performance e resultados em ambientes corporativos. </p>
+              <h5 class="w3-opacity" data-lang data-lang-br="FGV - Fundação Getulio Vargas" data-lang-us="FGV - Getulio Vargas Foundation">
+                <b>FGV - Fundação Getulio Vargas</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="2020 - 2020" data-lang-us="2020 - 2020">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2020
+              </h6>
+              <h7 class="w3-text-teal" data-lang data-lang-br="DEFINIÇÕES E OBJETIVOS DA GESTÃO DE PROJETOS, Estratégia e Negócios" data-lang-us="DEFINITIONS AND OBJECTIVES OF PROJECT MANAGEMENT, Strategy and Business">
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>DEFINIÇÕES E OBJETIVOS DA GESTÃO DE PROJETOS, Estratégia e Negócios
+              </h7>
+              <p data-lang 
+                 data-lang-br="O curso aborda os fundamentos da gestão de projetos, focando em planejamento, execução e controle de iniciativas organizacionais. Integra conceitos de estratégia empresarial com a prática da gestão de projetos. Ensina a alinhar projetos aos objetivos de negócio. Ideal para quem busca melhorar a performance e resultados em ambientes corporativos."
+                 data-lang-us="The course covers the fundamentals of project management, focusing on planning, execution, and control of organizational initiatives. It integrates business strategy concepts with project management practices. It teaches aligning projects with business objectives. Ideal for those seeking to improve performance and results in corporate environments.">
+                O curso aborda os fundamentos da gestão de projetos, focando em planejamento, execução e controle de iniciativas organizacionais. Integra conceitos de estratégia empresarial com a prática da gestão de projetos. Ensina a alinhar projetos aos objetivos de negócio. Ideal para quem busca melhorar a performance e resultados em ambientes corporativos.
+              </p>
 
-              <h5 class="w3-opacity"><b>ETEC Getúlio Vargas</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>07/2019 - 12/2020</h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Técnico Telecomunicação</h7>
-              <p>Atua na instalação, operação e manutenção de sistemas de comunicação. como telefonia, redes, transmissão de dados, rádio, TV e internet. Também desenvolve habilidades em eletrônica e infraestrutura de telecom. </p>
+              <h5 class="w3-opacity" data-lang data-lang-br="ETEC Getúlio Vargas" data-lang-us="ETEC Getúlio Vargas">
+                <b>ETEC Getúlio Vargas</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="07/2019 - 12/2020" data-lang-us="07/2019 - 12/2020">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>07/2019 - 12/2020
+              </h6>
+              <h7 class="w3-text-teal" data-lang data-lang-br="Técnico Telecomunicação" data-lang-us="Telecommunication Technician">
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Técnico Telecomunicação
+              </h7>
+              <p data-lang 
+                 data-lang-br="Atua na instalação, operação e manutenção de sistemas de comunicação, como telefonia, redes, transmissão de dados, rádio, TV e internet. Também desenvolve habilidades em eletrônica e infraestrutura de telecom."
+                 data-lang-us="Works in the installation, operation, and maintenance of communication systems, such as telephony, networks, data transmission, radio, TV, and internet. Also develops skills in electronics and telecom infrastructure.">
+                Atua na instalação, operação e manutenção de sistemas de comunicação, como telefonia, redes, transmissão de dados, rádio, TV e internet. Também desenvolve habilidades em eletrônica e infraestrutura de telecom.
+              </p>
 
-              <h5 class="w3-opacity"><b>GES - Grupo Educacional Sequencial </b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018</h6>
-              <h7 class="w3-text-teal"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Técnico Eletrotécnica </h7>
-              <p>O curso forma profissionais para atuar na geração, transmissão e distribuição de energia elétrica. Como instalações elétricas, comandos elétricos, automação e sistemas de potência. Desenvolve habilidades práticas em manutenção e projetos elétricos.  </p>
-
+              <h5 class="w3-opacity" data-lang data-lang-br="GES - Grupo Educacional Sequencial" data-lang-us="GES - Sequential Educational Group">
+                <b>GES - Grupo Educacional Sequencial</b>
+              </h5>
+              <h6 class="w3-text-teal" data-lang data-lang-br="2016 - 2018" data-lang-us="2016 - 2018">
+                <i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018
+              </h6>
+              <h7 class="w3-text-teal" data-lang data-lang-br="Técnico Eletrotécnica" data-lang-us="Electrotechnical Technician">
+                <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Técnico Eletrotécnica
+              </h7>
+              <p data-lang 
+                 data-lang-br="O curso forma profissionais para atuar na geração, transmissão e distribuição de energia elétrica. Como instalações elétricas, comandos elétricos, automação e sistemas de potência. Desenvolve habilidades práticas em manutenção e projetos elétricos."
+                 data-lang-us="The course trains professionals to work in the generation, transmission, and distribution of electrical energy. Covers electrical installations, electrical commands, automation, and power systems. Develops practical skills in maintenance and electrical projects.">
+                O curso forma profissionais para atuar na geração, transmissão e distribuição de energia elétrica. Como instalações elétricas, comandos elétricos, automação e sistemas de potência. Desenvolve habilidades práticas em manutenção e projetos elétricos.
+              </p>
             </div>
           </div>
 
-            
-
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
+            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Projetos" data-lang-us="Projects">
               <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
             </h2>
-            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No processo  de aprendizagem</p>
+            <p data-lang data-lang-br="No processo de aprendizagem" data-lang-us="In the learning process">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No processo de aprendizagem
+            </p>
             <div class="w3-container">
               <h6 class="w3-text-teal">
                 <i class="fa fa-github fa-fw w3-margin-right"></i>
-                <!--<a href="LINK_GITHUB" target="_blank">USUARIO_GITHUB/REPO</a>
+                <a href="https://github.com/santanar2" target="_blank" data-lang data-lang-br="Meu GitHub" data-lang-us="My GitHub">Meu GitHub</a>
               </h6>
-              <p>TODO</p>
+              <p data-lang data-lang-br="Repositórios e projetos em desenvolvimento." data-lang-us="Repositories and projects under development.">
+                Repositórios e projetos em desenvolvimento.
+              </p>
               <hr>
             </div>
-            <div class="w3-container">
+           <!-- <div class="w3-container">
               <h6 class="w3-text-teal">
                 <i class="fa fa-gitlab fa-fw w3-margin-right"></i>
-                <a href="LINK_GITLAB" target="_blank">USUARIO_GITLAB/REPO</a>
-              -->
+                <a href="https://gitlab.com/USUARIO_GITLAB" target="_blank" data-lang data-lang-br="Meu GitLab" data-lang-us="My GitLab">Meu GitLab</a>
               </h6>
-              <!--<p>TODO</p> -->
+              <p data-lang data-lang-br="Repositórios adicionais e colaborações." data-lang-us="Additional repositories and collaborations.">
+                Repositórios adicionais e colaborações.
+              </p>
             </div>
-          </div>
+          </div>--> 
   
           <!-- End Right Column -->
         </div>
