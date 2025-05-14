@@ -86,6 +86,13 @@ Algumas das principais tags e conceitos que utilizamos para o desenvolvimento de
 
 - `<footer>` define a seção de rodapé da página.
 
+- `<ul>` Usada para agrupar itens relacionados que não têm ordem específica.
+
+- `<li>` serve para definir cada item individual dentro de uma lista.
+
+- `<a>` âncora.
+
+- `href` especifica o endereço do destino (URL ou ID da página).
 
 ### 🔴 CSS:
 - w3-twothird: define um elemento com largura de dois terços do contêiner pai.

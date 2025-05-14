@@ -38,13 +38,17 @@
       let currentLanguage = 'br'; // Define o idioma inicial como português (BR)
 
       function toggleLanguage() {
-        const elements = document.querySelectorAll('[data-lang]');
+        const elements = document.querySelectorAll('[data-lang]'); // Seleciona todos os elementos com o atributo data-lang
         currentLanguage = currentLanguage === 'br' ? 'us' : 'br'; // Alterna entre 'br' e 'us'
 
         elements.forEach(element => {
           const langBR = element.getAttribute('data-lang-br');
           const langUS = element.getAttribute('data-lang-us');
-          element.innerHTML = currentLanguage === 'br' ? langBR : langUS; // Usa innerHTML para preservar a formatação completa
+
+          // Verifica se os atributos de idioma estão presentes
+          if (langBR && langUS) {
+            element.textContent = currentLanguage === 'br' ? langBR : langUS; // Atualiza o texto com base no idioma atual
+          }
         });
       }
     </script>
@@ -79,8 +83,23 @@
               <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ricardo.santanaccr@gmail.com</p>
               <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(11) 96033-6069</p>
               <hr>
+
+              <div class="w3-container">
+              <h2 id="Índice" data-lang data-lang-br="Índice" data-lang-us="index">Índice</h2> 
+              
+              <ul>
+                  <li><a href="#sobre" data-lang data-lang-br="Sobre" data-lang-us="About">Sobre</a></li>
+                  <li><a href="#experiencias" data-lang data-lang-br="Experiências" data-lang-us="Experiences">Experiências</a></li>
+                  <li><a href="#educacao" data-lang data-lang-br="Educação" data-lang-us="Education">Educação</a></li>
+                  <li><a href="#projetos" data-lang data-lang-br="Projetos" data-lang-us="Projects">Projetos</a></li>
+                </ul>
+
+            </div>
+              <hr>
+            <div class="w3-container"></div>
   
               <p class="w3-large">
+                
                 <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
               </p>
               <p data-lang data-lang-br="HTML" data-lang-us="HTML">HTML</p>
@@ -97,7 +116,8 @@
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:20%">20%</div>
               </div>
-  
+              <hr> 
+
               <p class="w3-large">
                 <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Courses</b>
               </p>
@@ -108,18 +128,20 @@
               <p data-lang data-lang-br="Bootcamp Microsoft GitHub Copilot" data-lang-us="Microsoft GitHub Copilot Bootcamp">Bootcamp Microsoft GitHub Copilot </p>
               <div class="w3-light-grey w3-round-xlarge w3-small">
                 <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
-              </div>
+              </div><br>
+
+              <hr>
 
               <p class="w3-large w3-text-theme">
                 <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
               </p>
               <p data-lang data-lang-br="Português" data-lang-us="Portuguese">Português</p>
               <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%">90%</div>
+                <div class="w3-round-xlarge w3-teal" style="height:24px;width:90%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;90%</div>
               </div>
               <p data-lang data-lang-br="Inglês" data-lang-us="English">Inglês</p>
               <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:15%">15%</div>
+                <div class="w3-round-xlarge w3-teal" style="height:24px;width:15%">&nbsp;&nbsp;&nbsp;&nbsp;15%</div>
               </div>
               <br>
             </div>
@@ -132,11 +154,13 @@
         <!-- Right Column -->
         <div class="w3-twothird">
     
+          <!-- Adicione os IDs correspondentes -->
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-05" data-lang data-lang-br="Sobre" data-lang-us="About">
+            <h2 id="sobre" class="w3-text-grey w3-padding-05" data-lang data-lang-br="Sobre" data-lang-us="About">
               <i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre
             </h2>
-            
+            <small><a href="#Índice">(voltar)</a></small>
+            <hr>
             <div class="w3-container">
               <p>
                 <h5 class="w3-opacity" data-lang data-lang-br="Transição de carreira:" data-lang-us="Career Transition:"><b>Transição de carreira:</b></h5>
@@ -144,27 +168,16 @@
                       data-lang-us="Transitioning from the technical maintenance field to front-end development, focusing on gaining practical experience and consolidating knowledge in HTML, CSS, JavaScript, and modern frameworks for building web interfaces.">
                   Em transição da área técnica de manutenção para o desenvolvimento front-end, com foco em adquirir experiência prática e consolidar conhecimentos em HTML, CSS, JavaScript e frameworks modernos para construção de interfaces web.
                 </span>
-                <br>
-                <h5 class="w3-opacity" data-lang data-lang-br="Habilidades:" data-lang-us="Skills:"><b>Habilidades:</b></h5>
-                <span data-lang data-lang-br="Conhecimento básico em HTML, CSS, JavaScript e GitHub."
-                      data-lang-us="Basic knowledge in HTML, CSS, JavaScript, and GitHub.">
-                  Conhecimento básico em HTML, CSS, JavaScript e GitHub.
-                </span>
-                <br>
-                <h5 class="w3-opacity" data-lang data-lang-br="Objetivo:" data-lang-us="Objective:"><b>Objetivo:</b></h5>
-                <span data-lang data-lang-br="Buscando ganhar experiência prática e aprofundar os fundamentos do desenvolvimento front-end, com abertura para aprender novas tecnologias e expandir conhecimentos na área."
-                      data-lang-us="Seeking to gain practical experience and deepen the fundamentals of front-end development, with openness to learning new technologies and expanding knowledge in the field.">
-                  Buscando ganhar experiência prática e aprofundar os fundamentos do desenvolvimento front-end, com abertura para aprender novas tecnologias e expandir conhecimentos na área.
-                </span>
               </p>
               <hr>
             </div>
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Experiências" data-lang-us="Experiences">
+            <h2 id="experiencias" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Experiências" data-lang-us="Experiences">
               <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
-            </h2>
+            </h2> <small><a href="#Índice">(voltar)</a></small>
+            <hr>
             <div class="w3-container">
               <h5 class="w3-opacity" data-lang data-lang-br="VIAMOBILIDADE 8 E 9 Técnico MEF CCO" data-lang-us="VIAMOBILIDADE 8 AND 9 MEF CCO Technician">
                 <b>VIAMOBILIDADE 8 E 9 <br>Técnico MEF CCO</b>
@@ -211,9 +224,10 @@
           </div>
 
           <div class="w3-container w3-card w3-white">
-            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Educação" data-lang-us="Education">
+            <h2 id="educacao" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Educação" data-lang-us="Education">
               <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
-            </h2>
+            </h2> <small><a href="#Índice">(voltar)</a></small>
+            <hr>
             <div class="w3-container">
               <h5 class="w3-opacity" data-lang data-lang-br="UNICESUMAR" data-lang-us="UNICESUMAR">
                 <b>UNICESUMAR</b>
@@ -313,9 +327,10 @@
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16" data-lang data-lang-br="Projetos" data-lang-us="Projects">
+            <h2 id="projetos" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Projetos" data-lang-us="Projects">
               <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
-            </h2>
+            </h2> <small><a href="#Índice">(voltar)</a></small>
+            <hr>
             <p data-lang data-lang-br="No processo de aprendizagem" data-lang-us="In the learning process">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No processo de aprendizagem
             </p>
