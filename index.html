@@ -78,6 +78,10 @@
         <span id="visit-label" data-lang data-lang-br="Visitas:" data-lang-us="Visits:">Visitas:</span>
         <span id="visits">0</span>
       </span>
+      <button id="audio-btn" class="w3-button w3-teal w3-round" style="border: 2px solid black;" title="Ouvir currículo">
+        <i class="fa fa-volume-up"></i>
+      </button>
+      <audio id="audio-curriculo" src="cv audio.mp3"></audio>
     </div>
     </div>
     <script>
@@ -87,6 +91,15 @@
         visits++;
         localStorage.setItem('visitCount', visits);
         document.getElementById('visits').textContent = visits;
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('http://localhost:3000/visitas')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('visits').textContent = data.visitas;
+          });
       });
     </script>
   
@@ -182,7 +195,7 @@
             <h2 id="sobre" class="w3-text-grey w3-padding-05" data-lang data-lang-br="Sobre" data-lang-us="About">
               <i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre
             </h2>
-            <small><a href="#Índice">(voltar)</a></small>
+            <small><a href="#sobre">(voltar)</a></small>
             
             <div class="w3-container">
               <p>
@@ -199,7 +212,7 @@
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 id="experiencias" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Experiências" data-lang-us="Experiences">
               <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
-            </h2> <small><a href="#Índice">(voltar)</a></small>
+            </h2> <small><a href="#sobre">(voltar)</a></small>
             
             <div class="w3-container">
               <h5 class="w3-opacity" data-lang data-lang-br="VIAMOBILIDADE 8 E 9 Técnico MEF CCO" data-lang-us="VIAMOBILIDADE 8 AND 9 MEF CCO Technician">
@@ -218,7 +231,7 @@
 
             <div class="w3-container">
               <h5 class="w3-opacity" data-lang data-lang-br="FIBRANETBR Técnico de telecomunicações" data-lang-us="FIBRANETBR <br>Telecommunications Technician">
-                <b>FIBRANETBR <br>Telecommunications Technician</b>
+                <b>FIBRANETBR <br>Técnico de telecomunicações</b>
               </h5>
               <h6 class="w3-text-teal" data-lang data-lang-br="Fevereiro de 2021 - Agosto de 2021" data-lang-us="February 2021 - August 2021">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2021 - <span class="w3-tag w3-teal w3-round">August 2021</span>
@@ -232,8 +245,8 @@
             </div>
 
             <div class="w3-container">
-              <h5 class="w3-opacity" data-lang data-lang-br="ICOMON TECNOLOGIA LITDA. Técnico Fttx" data-lang-us="ICOMON TECNOLOGIA LITDA. Fttx Technician">
-                <b>ICOMON TECNOLOGIA LITDA. Técnico Fttx</b>
+              <h5 class="w3-opacity" data-lang data-lang-br="ICOMON TECNOLOGIA LTDA. Técnico Fttx" data-lang-us="ICOMON TECNOLOGIA LTDA. Fttx Technician">
+                <b>ICOMON TECNOLOGIA LTDA. Técnico Fttx</b>
               </h5>
               <h6 class="w3-text-teal" data-lang data-lang-br="Fevereiro de 2019 - Novembro de 2019" data-lang-us="February 2019 - November 2019">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>Fevereiro de 2019 - <span class="w3-tag w3-teal w3-round">Novembro de 2019</span>
@@ -249,7 +262,7 @@
           <div class="w3-container w3-card w3-white">
             <h2 id="educacao" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Educação" data-lang-us="Education">
               <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
-            </h2> <small><a href="#Índice">(voltar)</a></small>
+            </h2> <small><a href="#sobre">(voltar)</a></small>
             
             <div class="w3-container">
               <h5 class="w3-opacity" data-lang data-lang-br="UNICESUMAR" data-lang-us="UNICESUMAR">
@@ -262,9 +275,9 @@
                 <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Tecnologia em Análise e Desenvolvimento de Sistemas (ADS)
               </h7>
               <p data-lang 
-                 data-lang-br="A graduação de nível tecnólogo voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática."
+                 data-lang-br="A graduação de nível tecnólogio voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática."
                  data-lang-us="The undergraduate technologist degree is aimed at training professionals capable of working in the planning, development, implementation, and maintenance of computational systems. It combines a solid theoretical foundation with intense practical application.">
-                A graduação de nível tecnólogo voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática.
+                A graduação de nível tecnólogio voltada para a formação de profissionais capazes de atuar no planejamento, desenvolvimento, implementação e manutenção de sistemas computacionais. Ele combina uma base teórica sólida com uma intensa aplicação prática.
               </p>
               <hr>
             </div>
@@ -297,9 +310,9 @@
                 <i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>Especialização em Radiocomunicação
               </h7>
               <p data-lang 
-                 data-lang-br="Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma aborda em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT."
+                 data-lang-br="Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma abordagem em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT."
                  data-lang-us="Technical Specialization in Radiocommunication, System Networks, and Information Security in Telecommunications is aimed at training professionals to plan, implement, and manage communication and security systems in telecommunication networks. It covers digital modulation, optical and wireless network management, information security, and convergent network architectures such as 5G and IoT.">
-                Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma aborda em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT.
+                Especialização Técnica em Radiocomunicação, Redes de Sistemas e Segurança de Informações em Telecomunicações é voltado para capacitar profissionais a planejar, implementar e gerenciar sistemas de comunicação e segurança em redes de telecomunicação. Uma abordagem em modulação digital, gerência de redes ópticas e wireless, segurança da informação e arquitetura de redes convergentes como 5G e IoT.
               </p><hr><br>
 
               <h5 class="w3-opacity" data-lang data-lang-br="FGV - Fundação Getulio Vargas" data-lang-us="FGV - Getulio Vargas Foundation">
@@ -352,7 +365,7 @@
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 id="projetos" class="w3-text-grey w3-padding-16" data-lang data-lang-br="Projetos" data-lang-us="Projects">
               <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
-            </h2> <small><a href="#Índice">(voltar)</a></small>
+            </h2> <small><a href="#sobre">(voltar)</a></small>
             <hr>
             <p data-lang data-lang-br="No processo de aprendizagem" data-lang-us="In the learning process">
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No processo de aprendizagem
@@ -397,7 +410,17 @@
       <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
     </footer>
     
-   
+    <script>
+  document.getElementById('audio-btn').onclick = function() {
+    var audio = document.getElementById('audio-curriculo');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+</script>
   
   </body>
 
